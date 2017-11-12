@@ -53,6 +53,6 @@ $route['default_controller'] = 'blog';
 $config['sess_save_path'] = sys_get_temp_dir();
 
 
-** gpg second try3.
+** gpg second try4.
 
 */
