@@ -44,7 +44,7 @@ $route['default_controller'] = 'blog';
 	'hostname' => 'localhost',
 	'username' => 'root',
 	'password' => '',
-    'database' => 'magentodb',
+	'database' => 'magentodb',
 
 
 ** Set path to save sessions:
