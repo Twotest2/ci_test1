@@ -11,8 +11,8 @@ class Blog extends CI_Controller
 
 	function index()
 	{
-		$data = $this->m->getBlog();
-		print_r($data);
-		$this->load->view('blog/index');
+		$data['blogs'] = $this->m->getBlog();
+		//print_r($data);
+		$this->load->view('blog/index', $data);
 	}
 }

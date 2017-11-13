@@ -35,11 +35,15 @@
                 </tr>
             </thread>
             <tbody>
+            <?php 
+            if ($blogs) {
+                foreach ($blogs as $blog) {
+            ?>
                 <tr>
-                    <td>1</td>
-                    <td>test</td>
-                    <td>my description</td>
-                    <td>2016</td>
+                    <td><?php echo $blog->id ?></td>
+                    <td><?php echo $blog->title ?></td>
+                    <td><?php echo $blog->description ?></td>
+                    <td><?php echo $blog->created_at ?></td>
                     <td>
                         <a href="<?php echo base_url('') ?>"
                             class="btn btn-info">Edit</a>
@@ -47,6 +51,10 @@
                             class="btn btn-danger">Delete</a>
                     </td>
                 </tr>
+            <?php 
+                }
+            }
+            ?>
             </tbody>
         </table>
     </div>
