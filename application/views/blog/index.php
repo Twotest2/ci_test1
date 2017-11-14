@@ -47,7 +47,10 @@
                         <a href="<?php echo base_url('blog/edit/'.$blog->id) ?>"
                             class="btn btn-info">Edit</a>
                         <a href="<?php echo base_url('blog/delete/'.$blog->id) ?>"
-                            class="btn btn-danger">Delete</a>
+                            class="btn btn-danger"
+                            onclick="return confirm('Do you want to delete this record?')">
+                            Delete
+                        </a>
                     </td>
                 </tr>
             <?php 

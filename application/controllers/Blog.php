@@ -64,4 +64,18 @@ class Blog extends CI_Controller
 		}
 		redirect(base_url('blog/index'));
 	}
+
+	function delete($id)
+	{
+		$result = $this->m->delete($id);
+		
+		if ($result) {
+			$this->session->set_flashdata('success_msg', 'Record deleted successfully');
+			//echo "it's true";
+		} else {
+			$this->session->set_flashdata('error_msg', 'Faill to delete record');
+			//echo "it's false";
+		}
+		redirect(base_url('blog/index'));
+	}
 }
